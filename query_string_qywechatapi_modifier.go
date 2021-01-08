@@ -36,7 +36,7 @@ func (m *QyWechatApiModifier) ModifyRequest(req *http.Request) error {
 	ts := strconv.FormatInt(time.Now().Unix(), 10)
 	//hash := GetMD5Hash(ts + m.private + m.public)
 	//query.Set("apikey", m.public)
-	query.Set("cjts", ts)
+	query.Set("corpid", "wldfc8d2cef1")
 	//query.Set("hash", hash)
 	//TODO 
 	req.URL.RawQuery = query.Encode()
