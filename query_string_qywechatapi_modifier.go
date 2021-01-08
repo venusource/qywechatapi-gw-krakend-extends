@@ -33,7 +33,7 @@ type QyWechatApiModifierJSON struct {
 // ModifyRequest modifies the query string of the request with the given key and value.
 func (m *QyWechatApiModifier) ModifyRequest(req *http.Request) error {
 	query := req.URL.Query()
-	ts := strconv.FormatInt(time.Now().Unix(), 10)
+	//ts := strconv.FormatInt(time.Now().Unix(), 10)
 	//hash := GetMD5Hash(ts + m.private + m.public)
 	//query.Set("apikey", m.public)
 	query.Set("corpid", "wldfc8d2cef1")
