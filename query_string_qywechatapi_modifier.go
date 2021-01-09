@@ -5,8 +5,6 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"net/http"
-	"strconv"
-	"time"
 	"fmt"
 
 	"github.com/google/martian"
