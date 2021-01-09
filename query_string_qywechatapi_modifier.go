@@ -10,6 +10,7 @@ import (
 
 	"github.com/google/martian"
 	"github.com/google/martian/parse"
+	"github.com/devopsfaith/krakend/logging"
 )
 
 func init() {
@@ -37,6 +38,7 @@ func (m *QyWechatApiModifier) ModifyRequest(req *http.Request) error {
 	//hash := GetMD5Hash(ts + m.private + m.public)
 	//query.Set("apikey", m.public)
 	query.Set("corpid", "wldfc8d2cef1")
+	logger.Info("set corpid: ", "wldfc8d2cef1")
 	//query.Set("hash", hash)
 	//TODO 
 	req.URL.RawQuery = query.Encode()
