@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"strconv"
 	"time"
+	"fmt"
 
 	"github.com/google/martian"
 	"github.com/google/martian/parse"
@@ -38,7 +39,7 @@ func (m *QyWechatApiModifier) ModifyRequest(req *http.Request) error {
 	//hash := GetMD5Hash(ts + m.private + m.public)
 	//query.Set("apikey", m.public)
 	query.Set("corpid", "wldfc8d2cef1")
-	logger.Info("set corpid: ", "wldfc8d2cef1")
+	fmt.Println("set corpid: ", "wldfc8d2cef1")
 	//query.Set("hash", hash)
 	//TODO 
 	req.URL.RawQuery = query.Encode()
