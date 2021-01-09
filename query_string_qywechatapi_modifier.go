@@ -11,7 +11,6 @@ import (
 
 	"github.com/google/martian"
 	"github.com/google/martian/parse"
-	"github.com/devopsfaith/krakend/logging"
 )
 
 func init() {
